@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
+  - docker build -t travis_env_var_exercise . --build-arg NAME=${NAME}
   - docker tag simple-node vmlicona/travis_env_var_exercise:latest
 
 after_success:
